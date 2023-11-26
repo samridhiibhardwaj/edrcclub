@@ -1,0 +1,62 @@
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillMail,
+  AiFillInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+
+function Footer() {
+  let date = new Date();
+  let year = date.getFullYear();
+  return (
+    <Container fluid className="footer">
+      <Row>
+        <Col md="4" className="footer-copywright">
+          <h3>Embedded System Design And Robotics Club</h3>
+        </Col>
+        <Col md="4" className="footer-copywright">
+          <h3>Robotics 21-25</h3>
+        </Col>
+        <Col md="4" className="footer-body">
+          <ul className="footer-icons">
+          <li className="social-icons">
+              <a
+                href="mailto:stellarroboticsclub@gmail.com"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillMail/>
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.linkedin.com/in/esdrc-amity-05984a2a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://instagram.com/esdrc_amity?igshid=MzMyNGUyNmU2YQ=="
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillInstagram />
+              </a>
+            </li>
+          </ul>
+        </Col>
+      </Row>
+    </Container>
+  );
+}
+
+export default Footer;
